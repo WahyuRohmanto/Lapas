@@ -1,0 +1,168 @@
+/* Reset gaya default */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 800px; /* Lebar maksimal form */
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Tata letak grid dua kolom */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom dengan proporsi sama */
+    gap: 20px; /* Jarak antara kolom dan baris */
+}
+
+/* Gaya untuk label */
+.form-container label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Gaya untuk input, select, dan file */
+.form-container input[type="text"],
+.form-container input[type="date"],
+.form-container input[type="number"],
+.form-container input[type="file"],
+.form-container select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: border 0.3s ease;
+}
+
+.form-container input[type="text"]:focus,
+.form-container input[type="date"]:focus,
+.form-container input[type="number"]:focus,
+.form-container select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Gaya untuk tombol submit */
+.form-container button[type="submit"] {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Gaya untuk file input */
+.form-container input[type="file"] {
+    padding: 5px;
+}
+
+.form-container input[type="file"]::file-selector-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.form-container input[type="file"]::file-selector-button:hover {
+    background-color: #0056b3;
+}
+
+/* CSS untuk tombol Kembali */
+a.btn-back {
+    display: inline-block;
+    background-color: #ff0000; /* Warna biru */
+    color: white;
+    padding: 11px 18px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 16px;
+    width: auto; /* Tombol tidak mengisi seluruh lebar */
+    margin-left: 22px;
+    margin-top: 12px;
+}
+
+a.btn-back:hover {
+    background-color: #a31717; /* Warna biru gelap saat hover */
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3); /* Bayangan lebih besar saat hover */
+}
+
+a.btn-back:active {
+    background-color: #004085; /* Warna biru lebih gelap saat tombol ditekan */
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2); /* Bayangan lebih kecil saat ditekan */
+}
+
+/* Tombol Kembali dan Simpan Sejajar dengan ruang merata */
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Menyebar tombol ke kiri dan kanan */
+    align-items: center;
+    margin-top: 20px;
+}
+
+.button-container a,
+.button-container button {
+    width: auto; /* Tombol hanya sebesar kontennya */
+}
+
+
+
+/* Untuk tampilan mobile */
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr; /* Form menjadi satu kolom */
+    }
+
+    .form-container button[type="submit"] {
+        grid-column: span 1;
+    }
+
+    .button-container {
+        flex-direction: column; /* Menata tombol secara vertikal pada perangkat mobile */
+        align-items: center;
+    }
+
+    .button-container a,
+    .button-container button {
+        width: 100%; /* Tombol memenuhi lebar layar pada perangkat mobile */
+        margin-bottom: 10px;
+    }
+}

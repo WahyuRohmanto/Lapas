@@ -1,0 +1,280 @@
+/* Reset and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center; /* Vertikal ke tengah */
+    justify-content: center; /* Horizontal ke tengah */
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 15px 30px;
+    margin-bottom: 30px;
+    text-align: center; /* Pastikan teks terpusat */
+    flex-direction: column; /* Atur elemen secara vertikal */
+}
+
+.header .logo {
+    width: 112px;
+    height: auto;
+    margin-bottom: 10px; /* Tambahkan jarak di bawah logo */
+}
+
+.header-text h1, .header-text h2, .header-text p {
+    margin: 5px 0;
+}
+
+.header-text h1 {
+    font-size: 16px;
+}
+
+.header-text h2 {
+    font-size: 13px;
+}
+
+.header-text p {
+    font-size: 10px;
+}
+
+
+/* Title Section */
+.title-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.title-section h3 {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.title-section .queue-number {
+    font-size: 18px;
+    color: #2980b9;
+    font-weight: 600;
+}
+
+/* Content Section */
+.content-section {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.details-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.details-table td {
+    padding: 8px;
+    font-size: 14px;
+}
+
+.details-table .label {
+    font-weight: bold;
+    width: 150px;
+}
+
+.details-table .separator {
+    width: 10px;
+}
+
+.details-table .content {
+    font-style: italic;
+    color: #333;
+}
+
+h4 {
+    font-size: 14px;
+    margin-top: 30px;
+    font-weight: 600;
+}
+
+.item-table {
+    width: 70%;
+    border-collapse: collapse;
+}
+
+.item-table th, .item-table td {
+    padding: 8px;
+    font-size: 14px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.item-table th {
+    background-color: #2980b9;
+    color: white;
+}
+
+.item-table td {
+    background-color: #f9f9f9;
+}
+
+/* Item Napi Section */
+.item-napi {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between; /* Untuk memastikan elemen tersebar secara merata */
+    align-items: center; /* Menyelaraskan elemen secara vertikal */
+}
+
+.detail-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; /* Menyelaraskan foto dan data secara vertikal */
+}
+
+.detail-container div {
+    flex: 1;
+    margin: 10px;
+    text-align: left;
+}
+.warga-foto {
+    width: 70%; /* Foto akan memakan 40% dari lebar kontainer */
+    height: auto;
+    max-width: 300px;  /* Setel ukuran maksimum */
+    object-fit: cover; /* Agar gambar tidak terdistorsi */
+    transform: translateY(-30px); /* Menggeser foto ke atas */
+}
+    
+
+.detail-data p {
+    font-size: 12px;
+    margin-bottom: 8px;
+    margin-right: 28px;
+}
+
+/* Button Print */
+.print-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2980b9;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.print-btn:hover {
+    background-color: #1c5988;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    
+    
+    .header .logo {
+        width: 100px; /* Ukuran logo tetap saat cetak */
+        height: auto;
+    }
+
+    .content-section {
+        box-shadow: none; /* Hilangkan bayangan untuk estetika cetakan */
+    }
+   
+   
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: #2c3e50 !important; /* Warna latar belakang header */
+        color: white !important; /* Warna teks agar kontras */
+        -webkit-print-color-adjust: exact; /* Memastikan warna dicetak di Chrome */
+        print-color-adjust: exact; /* Memastikan warna dicetak di browser modern */
+    }
+
+    .header-text h1, .header-text h2, .header-text p {
+        margin: 0;
+    }
+
+    .content-section {
+        padding: 15px;
+    }
+
+    .item-table  {
+        width: 288px;
+    }
+
+    .details-table td {
+        font-size: 12px;
+    }
+
+    .warga-foto {
+        max-width: 80%; /* Foto menggunakan 50% lebar pada layar tablet */
+        transform: translateY(-20px); /* Sesuaikan transformasi pada layar kecil */
+    }
+
+    .detail-container {
+        flex-direction: row; /* Sejajarkan foto dan data dalam satu baris */
+        align-items: center; /* Menyelaraskan konten secara vertikal */
+    }
+
+    .detail-container div {
+        margin: 0 10px; /* Tambahkan margin di sekitar elemen */
+    }
+
+    .print-btn {
+        width: 70%;
+        padding: 12px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header .logo {
+        width: 139px;
+    }
+
+    .header-text h1 {
+        font-size: 12px;
+    }
+
+    .header-text h2 {
+        font-size: 12px;
+    }
+
+    .header-text p {
+        font-size: 12px;
+    }
+
+    .title-section h3 {
+        font-size: 17px;
+    }
+
+    .details-table td {
+        font-size: 12px;
+    }
+
+    .item-table td, .item-table th {
+        font-size: 12px;
+    }
+
+    .print-btn {
+        font-size: 16px;
+    }
+}
+
+@media print {
+    .print-btn {               /* Sembunyikan kolom Aksi data */
+        display: none;
+    }
+}

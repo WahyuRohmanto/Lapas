@@ -1,0 +1,331 @@
+/* Animasi global untuk fade-in dan scale */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.josefin-sans {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 29px;
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    background-color: #ffffff;
+}
+
+/* Sidebar dengan animasi fade-in */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #05092b;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    animation: fadeIn 1s ease;
+}
+
+/* Animasi untuk logo di sidebar */
+.sidebar .logo img {
+    width: 240px;
+    height: 140px;
+    margin-bottom: 20px;
+    animation: scaleIn 0.8s ease;
+}
+
+.sidebar .logo h2 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+    opacity: 0;
+    animation: slideIn 0.5s forwards;
+    padding-top: 22px;
+}
+
+.sidebar ul li:nth-child(1) { animation-delay: 0.1s; }
+.sidebar ul li:nth-child(2) { animation-delay: 0.2s; }
+.sidebar ul li:nth-child(3) { animation-delay: 0.3s; }
+.sidebar ul li:nth-child(4) { animation-delay: 0.4s; }
+.sidebar ul li:nth-child(5) { animation-delay: 0.5s; }
+
+/* Animasi slide in */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+}
+
+.sidebar ul li a:hover {
+    color: #ebf836;
+    transform: translateX(10px);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Main content dengan animasi fade-in */
+.main-content {
+    margin-left: 48px;
+    padding: 20px;
+    width: calc(100% - 250px);
+    animation: fadeIn 1s ease;
+}
+
+.main-content header p {
+    margin: 0;
+    font-weight: 600;
+    background-color: #0056b3;
+    padding: 10px 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+}
+
+header {
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.main-content header h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#tanggal {
+    font-size: 1rem;
+    color: #353232;
+    opacity: 0.8;
+}
+
+/* Animasi fade-in untuk statistik */
+.stats {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.stats .card {
+    flex: 1;
+    padding: 20px;
+    border-radius: 9px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.2s ease;
+    animation-delay: 0.2s;
+}
+
+.stats .card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.stats .card p {
+    font-size: 2.5rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+.card-icon {
+    font-size: 5.2rem;
+    opacity: 0.4;
+}
+
+.card-narapidana {
+    background-color: #007bff;
+}
+
+.card-kunjungan {
+    background-color: #ffc107;
+}
+
+.card-tahanan {
+    background-color: #dc3545;
+}
+
+.info-bawah {
+    margin-top: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.info-bawah .icon-tahanan {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 2rem;
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+
+.info-bawah .icon-tahanan i {
+    font-size: 3rem;
+}
+
+.info-bawah .icon-tahanan p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #6c757d;
+}
+
+.info-bawah .alamat {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+.logo h2 {
+    font-size: 18px;
+}
+
+/* Media Query untuk layar kecil (ponsel) */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .sidebar .logo img {
+        width: 180px;
+        height: 100px;
+    }
+
+    .sidebar ul li a {
+        font-size: 16px;
+    }
+
+    .main-content {
+        margin-left: 210px; /* Sesuaikan dengan lebar sidebar */
+        padding: 15px;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .stats .card {
+        width: 100%; /* Membuat card memenuhi layar */
+    }
+
+    .info-bawah .icon-tahanan p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Media Query untuk layar sangat kecil (ponsel lama) */
+@media (max-width: 480px) {
+    .sidebar {
+        width: 160px;
+        padding: 15px;
+    }
+
+    .sidebar ul li a {
+        font-size: 14px;
+    }
+
+    .main-content {
+        margin-left: 170px; /* Sesuaikan dengan lebar sidebar */
+    }
+
+    .main-content header p {
+        font-size: 0.9rem;
+    }
+
+    .stats .card h3 {
+        font-size: 1rem;
+    }
+
+    .stats .card p {
+        font-size: 2rem;
+    }
+
+    .info-bawah .icon-tahanan p {
+        font-size: 1rem;
+    }
+
+    .info-bawah .alamat {
+        font-size: 0.9rem;
+    }
+}
+
+/* Media Query untuk layar besar (desktop) */
+@media (min-width: 1024px) {
+    .sidebar {
+        width: 250px;
+    }
+
+    .main-content {
+        margin-left: 50px; /* Sesuaikan dengan lebar sidebar */
+        padding: 20px;
+    }
+
+    .stats {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .stats .card {
+        width: calc(33.33% - 20px); /* Membuat card memiliki ukuran yang proporsional */
+    }
+}

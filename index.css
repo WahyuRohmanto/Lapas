@@ -1,0 +1,98 @@
+/* Reset and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background: linear-gradient(to bottom, #2c3e50, #2980b9); /* Latar belakang gradasi */
+    color: #fff;
+    height: 100vh; /* Tinggi penuh layar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Container */
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1); /* Latar belakang semi-transparan */
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+    max-width: 400px;
+    width: 90%; /* Responsif untuk layar kecil */
+}
+
+/* Heading */
+.container h1 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.container p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Button Group */
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Jarak antar tombol */
+}
+
+/* Buttons */
+.btn {
+    display: block;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+}
+
+/* Button Admin */
+.btn-admin {
+    background: #34495e;
+    border: 2px solid #2c3e50;
+}
+
+.btn-admin:hover {
+    background: #2c3e50;
+    transform: translateY(-3px);
+}
+
+/* Button Visitor */
+.btn-visitor {
+    background: #27ae60;
+    border: 2px solid #1e8449;
+}
+
+.btn-visitor:hover {
+    background: #1e8449;
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .container h1 {
+        font-size: 22px;
+    }
+
+    .container p {
+        font-size: 16px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

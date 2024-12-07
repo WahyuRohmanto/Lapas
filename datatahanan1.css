@@ -1,0 +1,234 @@
+/* Gaya umum untuk halaman */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Posisikan di atas */
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 90px 0; /* Tambahkan padding atas jika ingin jarak dari atas */
+    min-height: 100vh;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.josefin-sans{
+    font-optical-sizing: auto;
+    font-weight: 29px;
+    font-style: normal;
+}
+
+.data-table {
+    width: 90%;
+    max-width: 2900px;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.data-table h3 {
+    text-align: center;
+    font-size: 33px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Tombol Tambah Narapidana */
+.btn-tambah {
+    background-color: #0e0f0e;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.btn-tambah:hover {
+    background-color: #45a049;
+}
+
+/* Gaya untuk tabel */
+/* Gaya untuk tabel */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+thead th {
+    background-color: #007bff;
+    color: white;
+    font-weight: normal;
+    padding: 12px;
+    text-align: left;
+    border: none;
+}
+
+tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd; /* Tambahkan garis bawah pada sel */
+}
+
+/* Hapus garis bawah pada baris terakhir */
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+
+/* Gaya untuk gambar berbentuk kotak */
+table img {
+    object-fit: cover;
+    width: 80px; /* Atur lebar gambar */
+    height: 80px; /* Atur tinggi gambar */
+    border-radius: 0px; /* Hilangkan border-radius untuk bentuk kotak */
+}
+
+
+/* Wrapper untuk tombol */
+.action-buttons {
+    display: flex; /* Gunakan Flexbox */
+    flex-direction: column; /* Tumpuk tombol secara vertikal */
+    gap: 10px; /* Jarak antar tombol */
+    align-items: flex-start; /* Rata kiri tombol */
+}
+
+/* Tombol Hapus */
+.btn-hapus {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e90023;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Jarak antara ikon dan teks */
+}
+
+/* Tombol Ubah */
+.btn-ubah {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    background-color: #007bff;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Jarak antara ikon dan teks */
+}
+
+
+/* Ikon Pena */
+.btn-ubah i {
+    font-size: 14px; /* Ukuran ikon */
+    color: #ffffff; /* Warna ikon */
+}
+
+
+/* Ikon */
+.btn-hapus i {
+    font-size: 14px;
+}
+
+
+/* Tombol Kembali ke Dashboard */
+.btn-dashboard {
+    position: fixed; /* Perbaikan dari 'flex' ke 'fixed' untuk menempelkannya di layar */
+    bottom: 50px;
+    right: 50px;
+    background-color: #1341c0;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+
+}
+
+.btn-dashboard:hover {
+    background-color: #102e7a;
+}
+
+.btn-container {
+    display: flex;                /* Menggunakan Flexbox untuk penataan */
+    justify-content: flex-end;    /* Menyusun elemen ke kanan */
+    margin-bottom: 20px;         /* Jarak bawah untuk memisahkan tombol dengan tabel */
+}
+
+.btn-print, .btn-tambah {
+    background-color: #1fc724;   /* Warna latar belakang tombol */
+    color: white;                /* Warna teks tombol */
+    border: none;                /* Tanpa border */
+    padding: 10px 15px;         /* Jarak dalam tombol */
+    text-align: center;          /* Teks di tengah */
+    text-decoration: none;       /* Tanpa garis bawah */
+    display: inline-block;       /* Mengatur tampilan sebagai blok inline */
+    margin: 4px;                /* Jarak antar tombol */
+    cursor: pointer;             /* Tanda tangan pointer saat hover */
+    border-radius: 5px;         /* Sudut tombol membulat */
+    font-size: 16px;             /* Ukuran font */
+    font-family: "Josefin Sans", sans-serif;
+    
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-print:hover, .btn-tambah:hover {
+    background-color: #071381;   /* Warna saat hover */
+    transform: translateY(-2px); /* Efek saat dihover */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-4px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* CSS untuk elemen-elemen yang tidak akan ditampilkan saat print */
+@media print {
+    .btn-container,               /* Sembunyikan tombol print dan tambah narapidana */
+    .btn-dashboard,               /* Sembunyikan tombol kembali ke dashboard */
+    .btn-hapus,                   /* Sembunyikan tombol hapus */
+    th:last-child,                /* Sembunyikan kolom Aksi header */
+    td:last-child {               /* Sembunyikan kolom Aksi data */
+        display: none;
+    }
+
+    /* Mengatur lebar tabel saat print */
+    table {
+        width: 100%;
+    }
+}

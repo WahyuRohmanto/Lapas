@@ -1,0 +1,176 @@
+/* Umum */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Mengubah align ke atas */
+    min-height: 100vh;
+    padding-top: 20px; /* Tambahkan ini jika ingin ada sedikit jarak dari atas */
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.josefin-sans{
+    font-optical-sizing: auto;
+    font-weight: 29px;
+    font-style: normal;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-top: 0; /* Ubah ini menjadi 0 */
+}
+
+
+/* Header */
+h2 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Tombol Kembali */
+.back-button {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.btn-back {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-back:hover {
+    background-color: #0056b3;
+}
+
+/* Tabel */
+/* Tabel */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 1px solid #000000; /* Tambahkan border pada tabel */
+}
+
+thead th {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 15px;
+    text-align: left;
+    font-weight: normal;
+    font-size: 14px;
+    border: 1px solid #000000; /* Tambahkan border pada header tabel */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #000000;
+}
+
+tbody tr:hover {
+    background-color: #f1f7ff;
+}
+
+td, th {
+    padding: 15px;
+    border: 1px solid #000000; /* Tambahkan border pada sel tabel */
+    font-size: 14px;
+}
+
+/* Container untuk tombol */
+.action-buttons {
+    display: flex;
+    flex-direction: column; /* Susun tombol secara vertikal */
+    align-items: flex-start; /* Rapatkan tombol ke kiri */
+    gap: 10px; /* Jarak antar tombol */
+}
+
+/* Gaya untuk tombol Detail */
+.action-buttons .btn-detail {
+    background-color: #13bff3; /* Warna biru untuk tombol Detail */
+    color: white;
+    text-decoration: none; /* Hilangkan garis bawah */
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.action-buttons .btn-detail i {
+    margin-right: 5px; /* Jarak antara ikon dan teks */
+}
+
+.action-buttons .btn-detail:hover {
+    background-color: #0d6f8d; /* Warna saat tombol Detail di-hover */
+}
+
+/* Gaya untuk tombol Hapus */
+.action-buttons .btn-hapus {
+    background-color: #e21811; /* Warna merah untuk tombol Hapus */
+    color: white;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.action-buttons .btn-hapus i {
+    margin-right: 5px; /* Jarak antara ikon dan teks */
+}
+
+.action-buttons .btn-hapus:hover {
+    background-color: #971511; /* Warna saat tombol Hapus di-hover */
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 24px;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+
+    tr {
+        margin-bottom: 15px;
+    }
+
+    td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}

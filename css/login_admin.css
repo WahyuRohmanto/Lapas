@@ -1,0 +1,146 @@
+:root {
+    --label-color: #ffffff; /* Warna default untuk label */
+    --label-hover-color: #4e73df; /* Warna saat hover */
+    --label-focus-color: #1cc88a; /* Warna saat input dalam fokus */
+}
+
+/* Reset dan Body */
+body {
+    font-family: 'Nunito', sans-serif;
+    background: url('uyy.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.30);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    backdrop-filter: blur(7px);
+}
+
+.container h2 {
+    margin-bottom: 1.5rem;
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--label-color); /* Menggunakan warna variabel */
+    font-size: 1.8rem;
+}
+
+label {
+    font-weight: 600;
+    color: var(--label-color); /* Warna label menggunakan variabel */
+    display: block;
+    margin-bottom: 0.5rem;
+    text-align: left;
+    transition: color 0.3s ease; /* Efek transisi warna */
+}
+
+/* Hover dan fokus pada label */
+input[type="text"]:focus + label,
+input[type="password"]:focus + label {
+    color: var(--label-focus-color); /* Warna label berubah saat input fokus */
+}
+
+input[type="text"]:hover + label,
+input[type="password"]:hover + label {
+    color: var(--label-hover-color); /* Warna label berubah saat input hover */
+}
+
+/* Animasi untuk input username dan password */
+input[type="text"],
+input[type="password"] {
+    width: 90%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+/* Fokus pada input */
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #1cc88a;
+    outline: none;
+    box-shadow: 0 0 8px rgba(28, 200, 138, 0.5);
+    background-color: #ffffff;
+    transform: scale(1.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efek hover */
+input[type="text"]:hover,
+input[type="password"]:hover {
+    border-color: #4e73df;
+    box-shadow: 0 0 5px rgba(78, 115, 223, 0.3);
+}
+
+.password-container .input-group {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 40%;
+    right: 15px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+    font-size: 1.2rem;
+}
+
+/* Tombol */
+button {
+    background: linear-gradient(to right, #11204e, #06110d);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efek hover tombol */
+button:hover {
+    background: linear-gradient(to right, #1c58c8, #060c20);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Efek klik tombol */
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Pesan kesalahan */
+.error-message {
+    color: #e74a3b;
+    font-size: 0.9rem;
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    .container h2 {
+        font-size: 1.5rem;
+    }
+}
